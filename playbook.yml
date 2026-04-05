@@ -1,0 +1,5 @@
+- name: Install packages and start web our_web_service
+  hosts: all
+  become: true
+  roles:
+    - webserver

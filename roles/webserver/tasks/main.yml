@@ -1,0 +1,20 @@
+- name: Install web package
+  apt:
+    name: "{{ our_web_package }}"
+    state: present
+    update_cache: yes
+  notify:
+    - restart web service
+
+- name: Start web service
+  service:
+    name: "{{ our_web_service }}"
+    state: started
+    enabled: yes
+
+- name: Copy index.html to webserver
+  copy:
+    src: index.html
+    dest: /var/www/html/index.html
+  notify:
+    - restart web service
