@@ -86,11 +86,6 @@ sudo apt install ansible -y
 
 ### 4️⃣ Clone Repository
 ```bash
-
----
-
-### 4️⃣ Clone Repository
-```bash
 [web]
 localhost ansible_connection=local
 ```
