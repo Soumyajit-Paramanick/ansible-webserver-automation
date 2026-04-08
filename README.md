@@ -86,10 +86,18 @@ sudo apt install ansible -y
 
 ### 4️⃣ Clone Repository
 ```bash
+git clone https://github.com/Soumyajit-Paramanick/ansible-webserver-automation.git
+
+cd ansible-webserver-automation
+```
+---
+
+### 5️⃣ Configure Inventory
+
+```bash
 [web]
 localhost ansible_connection=local
 ```
-
 ---
 
 ### 6️⃣ Run Playbook
